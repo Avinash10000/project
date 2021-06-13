@@ -1,6 +1,6 @@
 running code:
 
-python3 python tflite_picamera_inference.py \
+python3 tflite_picamera_inference.py \
 
   --model /model.tflite \
   --labels /labels.txt
