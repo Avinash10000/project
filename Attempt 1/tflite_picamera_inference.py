@@ -46,9 +46,9 @@ def main():
   parser = argparse.ArgumentParser(
       formatter_class=argparse.ArgumentDefaultsHelpFormatter)
   parser.add_argument(
-      '--model', help='file pat5h of model e.g model.tflite', required=True)
+      '--model', help='/content/model.tflite', required=True)
   parser.add_argument(
-      '--labels', help='file path of label doc, e.g. labels.txt', required=True)
+      '--labels', help='/content/labels.txt', required=True)
   args = parser.parse_args()
 
   labels = load_labels(args.labels)
@@ -68,8 +68,10 @@ def main():
                                                          Image.ANTIALIAS)
         start_time = time.time()
         results = classify_image(interpreter, image)
+
         elapsed_ms = (time.time() - start_time) * 1000
         label_id, prob = results[0]
+         #i think 'prob' is the actual prediction
         stream.seek(0)
         stream.truncate()
         camera.annotate_text = '%s %.2f\n%.1fms' % (labels[label_id], prob,
