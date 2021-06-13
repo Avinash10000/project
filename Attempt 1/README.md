@@ -1,6 +1,8 @@
 
 You'll need to issue the source tflite1-env/bin/activate command from inside the /home/pi/tflite1 directory to reactivate the environment every time you open a new terminal window. You can tell when the environment is active by checking if (tflite1-env) appears before the path in your command prompt, as shown in the screenshot below.
 
+     camera.annotate_text = '%s %.2f\n%.1fms' % (labels[label_id], prob,
+                                                    elapsed_ms)
 - Possibly create another venv
 - Incorporate the tflite model into rest of code 
 - Install tflite on the actual raspberry pi: https://www.tensorflow.org/lite/guide/python#install_tensorflow_lite_for_python 
