@@ -1,7 +1,6 @@
 running code:
 
 python3 tflite_picamera_inference.py \
-
   --model /model.tflite \
   --labels /labels.txt
   
