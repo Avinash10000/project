@@ -1,4 +1,10 @@
+running code:
 
+python3 classify_picamera.py \
+  --model /tmp/mobilenet_v1_1.0_224_quant.tflite \
+  --labels /tmp/labels_mobilenet_quant_v1_224.txt
+  
+  
 You'll need to issue the source tflite1-env/bin/activate command from inside the /home/pi/tflite1 directory to reactivate the environment every time you open a new terminal window. You can tell when the environment is active by checking if (tflite1-env) appears before the path in your command prompt, as shown in the screenshot below.
 
      camera.annotate_text = '%s %.2f\n%.1fms' % (labels[label_id], prob,
